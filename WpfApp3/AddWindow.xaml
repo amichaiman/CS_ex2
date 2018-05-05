@@ -1,0 +1,64 @@
+﻿<Window x:Class="WpfApp3.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Add Movie" Height="280" Width="500" ResizeMode="NoResize">
+
+    <StackPanel>    
+        <GroupBox Margin="5" Padding="5" Header="Movie Data">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Title:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="6 0"/>
+                    <TextBlock Grid.Row="1" Text="Year:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="6 0"/>
+                    <TextBlock Grid.Row="2" Text="Director:" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="6 0"/>
+
+                    <TextBox Name="MovieTitleTextBox" Grid.Row="0" Grid.Column="1" Margin="5 18"/>
+                    <TextBox Name="MovieYearTextBox" Grid.Row="1" Grid.Column="1" Margin="5 18"/>
+                    <TextBox Name="MovieDirectorTextBox" Grid.Row="2" Grid.Column="1" Margin="5 18"/>
+                </Grid>
+
+
+                <GroupBox Grid.Row="0" Grid.Column="1" Margin="5" Header="Actors:">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <TextBox Name="MovieActor1TextBox" Grid.Row="1" Margin="5 8"/>
+                        <TextBox Name="MovieActor2TextBox" Grid.Row="2" Margin="5 8"/>
+                        <TextBox Name="MovieActor3TextBox" Grid.Row="3" Margin="5 8"/>
+                        <TextBox Name="MovieActor4TextBox" Grid.Row="0" Margin="5 8" />
+                    </Grid>
+
+
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+
+        <Button Content="Add Movie" Margin="150 0" Padding="5 3" FontSize="12" Click="Button_Click"/>
+    </StackPanel>
+    
+</Window>

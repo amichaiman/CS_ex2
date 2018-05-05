@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Movies" Height="280" Width="900" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox  Name="MovieListListBox" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                   BorderBrush="#111" Padding="5" Margin="7"
+                   ItemsSource="{Binding Dictionary.Values}"/>
+        
+        <Button Name="AddMovieButton" Grid.Row="1" Grid.Column="0" Margin="7 6" BorderBrush="#111" Content="Add Movie" FontSize="15" Click="AddMovieButton_Click"/>
+        <Button Name="DeleteMovieButton" Grid.Row="1" Grid.Column="1" Margin="7 6" BorderBrush="#111" Content="Delete Movie" FontSize="15" Click="DeleteMovieButton_Click"/>
+        <Button Name="SearchMovieButton" Grid.Row="1" Grid.Column="2" Margin="7 6" BorderBrush="#111" Content="Search" FontSize="15" Click="SearchMovieButton_Click"/>
+
+    </Grid>
+</Window>
